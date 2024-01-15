@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="gsap.min.js" defer></script>
+    <script src="ScrollTrigger.min.js" defer></script>
+    <script src="ScrollSmoother.min.js" defer></script>
+
+    <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+
+
+
+  </head>
+  <body>
+
+
+  </div>
+
+
+
+  <div class="wrapper">
+    <div class="content">
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="navbar-brand"></a>
+          <div class="navbar-wrap">
+           <ul class="navbar-menu">
+               
+              <div class="dropdown">
+                <li><a href="index.html" class="dropbtn">Главная</a></li>
+                <div class="dropdown-content">
+                  <a class="ret" href="index.html#str" >Сотрудники</a>
+                  <a class="ret" href="index.html#gle">Галерея</a>
+                </div>
+              </div>
+              <li><a href="index_2.html">О нас</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="index_3.html">Контакты</a></li>
+              <li><a href="map_site.html">Карта сайта</a></li>
+            </ul>
+            <a href="tel:+79895801613" class="callback">Обратный звонок</a>
+          </div>
+        </nav>
+
+
+
+
+        <header class="main-header">
+          <div class="layers">
+            <div class="layers__header">
+              <div class="layers__caption">Добро пожаловать в кафе-библиотеку</div>
+              <div class="layers__title">«FabFairy»</div>
+
+            </div>
+
+            <div class="layer layers__base" style="background-image: url(layer-base.png);" ></div>
+            <div class="layer layers__middle" style="background-image: url(layer-middle.png);"></div>
+            <div class="layer layers__front" style="background-image: url(layer-front.png);"></div>
+
+
+
+          </div>
+        </header>
+        <div class="sidebar">
+          <h2></h2>
+          <ul>
+            <li><a href="news.html#news1"></a></li>
+            <li><a href="news.html#news2"></a></li>
+            <li><a href="news.html#news3"></a></li>
+          </ul>
+          </div>
+          </div>  
+      </div>
+      <div class="sidebar2">
+          <a href="https://www.lipton.com/us/en/"></a>
+          <ul>
+            <li><a href="https://www.lipton.com/us/en/"><img src="Lipton-Egypt.png" width="150"></a></li>
+            <li><a href="https://www.lipton.com/us/en/"></a></li>
+          </ul>
+          </div>
+          </div>  
+      </div>
+        
+        
+
+
+        <article class="main-article" style="background-image: url(dungeon.jpg);">
+          <div class="main-article__content">
+            <h2 class="main-article__header">Пару слов</h2>
+            <p class="main-article__paragraph">Наше местечко создано для того, чтобы обеспечить вам уют и комфорт, которых так не хватает в последнее время. Приходите к нам за горячей чашкой кофе и прочтением давно забытой книги, чтобы согреть ваши сердца!</p>
+          </div>
+          <div class="copy">Master</div>
+        </article>
+
+      </div>
+    </div>
+    
+
+    <article class="main-article" style="background-image: url(#fff.jpeg);"></article>
+
+
+
+
+
+    <div  scri class="btn-up btn-up_hide"></div> 
+
+    <script> 
+      const btnUp = { 
+        el: document.querySelector('.btn-up'), 
+        show() { 
+        // удалим у кнопки класс btn-up_hide 
+          this.el.classList.remove('btn-up_hide'); 
+        }, 
+        hide() { 
+        // добавим к кнопке класс btn-up_hide 
+          this.el.classList.add('btn-up_hide'); 
+        }, 
+        addEventListener() { 
+        // при прокрутке содержимого страницы 
+          window.addEventListener('scroll', () => { 
+          // определяем величину прокрутки 
+            const scrollY = window.scrollY || document.documentElement.scrollTop; 
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем 
+            scrollY > 400 ? this.show() : this.hide(); 
+          }); 
+        // при нажатии на кнопку .btn-up 
+          document.querySelector('.btn-up').onclick = () => { 
+          // переместим в начало страницы 
+            window.scrollTo({ 
+              top: 0, 
+              left: 0, 
+              behavior: 'smooth' 
+            }); 
+          } 
+        } 
+      } 
+      btnUp.addEventListener(); 
+    </script>
+
+
+    <section class="inploer">
+      <div class="ab_imp">
+        <h1 id="gle" class="h1_imp">
+          Галерея
+        </h1>
+      </div>
+      <div class="img_imp">
+        <img src="1.jpg" alt="" class="img_impp">
+
+        <img src="photo_2023-06-01_02-30-43.jpg" alt="" class="img_impp">
+        <img src="photo_2023-06-01_02-31-09.jpg" alt="" class="img_impp">
+        <img src="photo_2023-06-01_02-40-22.jpg" alt="" class="img_impp">
+        
+      </div>
+      <div class="text_imp"></div>
+    </section>
+
+    <section class="sotrud">
+      <div class="inner_sotr">
+        <div id="str"  class="h_sotr">
+          Наши сотрудки
+        </div>
+        <div class="img_sotr">
+          <div class="grgr">
+            <img src="6.jpg" alt="" class="ingg">
+            <div class="text">
+              <p class="p_sort">Софья Горелова</p> 
+              <p class="p_sort">Бариста</p> 
+            </div>
+          </div>
+          <div class="grgr">
+            <img src="7.jpg" alt="" class="ingg">
+            <div class="text">
+              <p class="p_sort">Афанасий Лихачев</p>
+              <p class="p_sort">Официант</p>
+            </div>
+          </div>
+          <div class="grgr">
+            <img src="4.jpg" alt="">
+            <div class="text">
+              <p class="p_sort">Евгений Рожков</p> 
+              <p class="p_sort">Повар</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--Запись-->
+<section class="reservation">
+  <section id="Резерв столиков"></section>
+  <h3>Резерв столиков</h3>
+  <p>Вы можете зарезервировать столик, заполнив форму ниже:</p>
+  <form action="bd.php" method="post">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="phone">Телефон:</label>
+    <input type="phone" id="phone" name="phone">
+
+    <label for="time">Время:</label>
+    <input type="time" id="time" name="time">
+
+    <label for="date">Дата:</label>
+    <input type="date" id="date" name="date">
+    
+    <button type="submit" value="Записаться">
+  </form>
+  <p id="reservation-info"></p>
+</section>
+  
+
+
+    <footer class="footer">
+      <div id="suluguni">
+        <a href="https://vk.com/fawn0105">
+          <img src="vk.png" alt="вк" style="height: 50px;" >
+          <div class="footer__iteam-icone2"><a href="https://web.telegram.org/k/"></div> 
+            <img src="tg.png" alt="telegram" style="height: 50px;" > 
+            <div class="footer__iteam-icone3"><a href="https://web.whatsapp.com/"></div> 
+              <img src="whatsap.png" alt="whatsapp" style="height: 50px;" >
+            </a>
+          </div> 
+          <a href="tel:+79895801613">Телефон для связи: +7(916) 625-56-59</a>
+          <section id="reservation-info"></section> 
+          <div class="footer__iteam-text">
+            <a href="./index.html">Главная</a>
+            <a href="./index_2.html">О нас</a>
+            <a href="./index_3.html">Контакты</a>
+
+          </div>
+        </footer>
+
+
+
+  <!--<section id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <p>Кафе-библиотека «FabFairy»</p>
+          </div>
+          <div class="col-md-6">
+            
+          <ul>
+            
+            <a href="#"><li>О нас</li></a>
+            <a href="#"><li>Новости</li></a>
+            <a href="#"><li>Контакты</li></a>
+            </ul>
+            <p> 
+            <a href="#" target="_blank"><i class="fa-brands fa-vk" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </p>
+          </div>
+          <div class="col-md-3">
+            <a href="tel:+79895801613"><i class="fa fa-mobile" aria-hidden="true"></i>+7 (989) 580-16-13</a><br>
+            <a href="https://goo.gl/maps/JaQtVsc4pJeudv7u9? coh=178571&entry=tt" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i>Москва, улица Маросейка 9/2</a>
+
+
+          </div>
+          </div>
+          </div>
+        </section>-->
+
+
+
+      </body>
+      </html>
+
+
+
